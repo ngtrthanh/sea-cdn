@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HPR Sea</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
+    <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bulma.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://hpradar.com/seajs/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="map">
+
+        <div id="chart_div"></div>
+        <div id="button-container">
+            <button id="toggle-sidebar" class="svg-button">
+                <svg id="sidebar-icon" width="32px" height="32px" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" alt="Sidebar Toggle">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M20 20V4H4V20H20ZM18.5 18.5H16V5.5H18.5V18.5ZM14.5 5.5V18.5H5.5V5.5H14.5Z" fill="#1F2328" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M10.4434 12.0041L7.96967 9.53033L9.03033 8.46967L12.5647 12.0041L9.03098 15.5378L7.97032 14.4771L10.4434 12.0041Z"
+                        fill="#1F2328" />
+                </svg>
+            </button>
+        </div>
+        <div id="sidebar">
+            <h4>Ship table</h4>
+            <button id="dl-file" class="svg-button">
+                <svg fill="#000000" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    class="icon line" alt="Download File">
+                    <polyline points="15 14 12 17 9 14"
+                        style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;">
+                    </polyline>
+                    <path d="M12,17V3M4,17v3a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V17"
+                        style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;">
+                    </path>
+                </svg>
+            </button>
+            <div id="table-container"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://hpradar.com/js/leaflet-providers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster-src.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.0/proj4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4leaflet/1.0.2/proj4leaflet.min.js"></script>
+
+    <script src="https://hpradar.com/seajs/map_ctl.js"></script>
+    <script src="https://hpradar.com/seajs/markers.ship.js"></script>
+    <script src="https://hpradar.com/seajs/sidebar_handler.js"></script>
+    <script src="https://hpradar.com/seajs/plotshipbox8.js"></script>
+
+</body>
+
+</html>
